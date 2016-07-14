@@ -1,6 +1,8 @@
 import ko from 'knockout'
 
 export function cascade(callbacks, ...args) {
+  callbacks = callbacks.slice()
+
   return new Promise((resolve) => {
     if (callbacks.length === 0) {
       return resolve(true)
