@@ -1371,6 +1371,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    args[_key - 1] = arguments[_key];
 	  }
 
+	  callbacks = callbacks.slice();
+
 	  return new Promise(function (resolve) {
 	    if (callbacks.length === 0) {
 	      return resolve(true);
